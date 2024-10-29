@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #F0F0F0; /* Light background color */
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .heart {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            background-color: #ff4c68; /* Main color */
+            transform: rotate(-45deg);
+            animation: heartbeat 1s infinite;
+            margin-bottom: 20px; /* Space between heart and text */
+        }
+
+        .heart:before,
+        .heart:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: #ff4c68; /* Main color */
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            top: -40px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 40px;
+            top: 0;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .loading-text {
+            font-size: 1.5rem;
+            color: #ff4c68; /* Main color */
+            text-align: center; /* Center align the text */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="heart"></div>
+    <div class="loading-text">Website Under Development...</div>
+
+</body>
+</html>
